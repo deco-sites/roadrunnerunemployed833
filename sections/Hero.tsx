@@ -14,6 +14,7 @@ export interface Props {
    * @default Click here to tweak this text however you want.
    */
   title?: string;
+  subtitle?: string;
   /**
    * @default This text is fully editable and ready for your personal touch. Just click here, head over to the section window, or dive straight into the code to make changes as you see fit. Whether it's about the content, formatting, font, or anything in between, editing is just a click away.
    */
@@ -34,6 +35,7 @@ export default function HeroFlats({
     "This text is fully editable and ready for your personal touch. Just click here, head over to the section window, or dive straight into the code to make changes as you see fit. Whether it's about the content, formatting, font, or anything in between, editing is just a click away.",
   image,
   placement = "left",
+  subtitle = "",
   cta = [
     { id: "change-me-1", href: "/", text: "Change me", outline: false },
     { id: "change-me-2", href: "/", text: "Change me", outline: true },
@@ -74,6 +76,9 @@ export default function HeroFlats({
               }}
             >
             </div>
+            <p class="text-lg md:text-md leading-[150%]">
+              {subtitle}
+            </p>
             <p class="text-lg md:text-md leading-[150%]">
               {description}
             </p>
